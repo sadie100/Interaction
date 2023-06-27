@@ -9,6 +9,7 @@ type NavLinkProps = {
 export default function Navbar() {
   return (
     <NavbarWrapper>
+      <NavLink href="/canvas">그림판</NavLink>
       <NavLink href="/water">물</NavLink>
     </NavbarWrapper>
   );

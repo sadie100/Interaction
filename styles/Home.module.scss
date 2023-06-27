@@ -16,19 +16,20 @@
   min-width: 200px;
   height: 100%;
   min-height: 100vh;
-  border: 1px solid gray;
+  border: 2px solid darkgray;
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .navLink {
   height: 100px;
-  border: 3px solid darkgray;
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  border-bottom: 2px solid darkgray;
 }
 
 .article {

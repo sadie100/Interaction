@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return <>홈 페이지</>;
+  return <>click the nav bars</>;
 };
 
 export default Home;
