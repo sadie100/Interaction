@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "@/components/Layout";
 import { Noto_Sans_KR } from "@next/font/google";
+import styles from "@/styles/Home.module.scss";
 
 const sans = Noto_Sans_KR({
   subsets: ["latin"],
@@ -10,9 +11,9 @@ const sans = Noto_Sans_KR({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={sans.className}>
+    <main className={`${sans.className} ${styles.main}`}>
       <Layout>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Layout>
     </main>
   );

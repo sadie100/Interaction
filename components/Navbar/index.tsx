@@ -1,5 +1,5 @@
 import { ChildProps } from "@/types";
-import styles from "./Navbar.module.scss";
+import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
 
 type NavLinkProps = {

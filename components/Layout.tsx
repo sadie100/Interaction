@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.scss";
 import Head from "next/head";
 
 type LayoutProps = {
@@ -16,7 +16,7 @@ export default function Layout({ children }: LayoutProps) {
       </Head>
       <Navbar />
 
-      <main className={styles.main}>{children}</main>
+      <article className={styles.article}>{children}</article>
       <footer className={styles.footer}></footer>
     </>
   );
