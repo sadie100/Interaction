@@ -1,0 +1,13 @@
+.card {
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  

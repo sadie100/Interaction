@@ -10,6 +10,7 @@ export default function Navbar() {
   return (
     <NavbarWrapper>
       <NavLink href="/water">물</NavLink>
+      <NavLink href="/card_game">카드 게임</NavLink>
     </NavbarWrapper>
   );
 }
