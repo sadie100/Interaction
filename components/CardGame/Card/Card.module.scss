@@ -10,4 +10,8 @@
   .card.flipped {
     transform: rotateY(180deg);
   }
+
+  .card.matched {
+    visibility: hidden;
+  }
   

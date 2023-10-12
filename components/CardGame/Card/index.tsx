@@ -4,21 +4,23 @@ import styles from './Card.module.scss';
 interface CardProps {
   id: number;
   color: string;
+  flipped: boolean;
   matched: boolean;
   onCardClick: (id: number, color: string) => void;
+  canClick: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ id, color, matched, onCardClick }) => {
+const Card: React.FC<CardProps> = ({ id, color, flipped, matched, onCardClick, canClick }) => {
   const handleCardClick = () => {
-    if (!matched) {
+    if (!flipped && !matched) {
       onCardClick(id, color);
     }
   };
 
   return (
     <div
-      className={`${styles.card} ${matched ? styles.flipped : ''}`}
-      style={{ backgroundColor: matched ? color : 'white' }}
+      className={`${styles.card} ${flipped ? styles.flipped : ''} ${matched ? styles.matched : ''}`}
+      style={{ backgroundColor: flipped ? color : 'white' }}
       onClick={handleCardClick}
     ></div>
   );
