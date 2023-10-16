@@ -91,6 +91,9 @@ const GameBoard: React.FC = () => {
   return (
     <>
       <div className="score">Score: {score}</div>
+      {cards.every((card) => card.matched) && (
+        <div className={styles.message}>Game Ends! Your score is: {score}</div>
+      )}
       <div className={styles["game-board"]}>
         {cards.map((card) => (
           <Card
@@ -103,11 +106,6 @@ const GameBoard: React.FC = () => {
             canClick={canClick}
           />
         ))}
-        {cards.every((card) => card.matched) && (
-          <div className={styles.message}>
-            Game Ends! Your score is: {score}
-          </div>
-        )}
       </div>
     </>
   );
