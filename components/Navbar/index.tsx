@@ -1,3 +1,5 @@
+/* Navbar.tsx */
+
 import { ChildProps } from "@/types";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
@@ -22,7 +24,7 @@ export function NavbarWrapper({ children }: ChildProps) {
 export function NavLink({ href, children }: NavLinkProps & ChildProps) {
   return (
     <Link href={href} className={styles.navLink}>
-      {children}
+      <span>{children}</span>
     </Link>
   );
 }

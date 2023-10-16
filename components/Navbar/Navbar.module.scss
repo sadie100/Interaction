@@ -1,24 +1,131 @@
-$color: red;
+/* Navbar.module.scss */
+
+// $primaryColor: #ff6b6b; /* 주 색상 */
+// $secondaryColor: #3d7a8d; /* 보조 색상 */
 
 .nav {
   width: 20%;
   min-width: 200px;
   height: 100%;
   min-height: 100vh;
-  border: 1px solid gray;
-  position: absolute;
+  background-color: white; /* 배경색을 주 색상으로 변경 */
+  position: fixed; /* 좌측에 고정 */
   left: 0;
   top: 0;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
+  gap: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
+// .navLink {
+//   height: 100px;
+//   background-color: $secondaryColor; /* 배경색을 보조 색상으로 변경 */
+//   border: 3px solid $primaryColor; /* 주 색상 테두리 */
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-decoration: none; /* 링크 밑줄 제거 */
+//   color: #fff; /* 텍스트 색상을 흰색으로 변경 */
+//   transition: background-color 0.3s; /* 배경색 변경 시 부드러운 효과 */
+
+//   &:hover {
+//     background-color: #4e98b2; /* 호버 시 배경색 변경 */
+//   }
+// }
+
 .navLink {
-  height: 100px;
-  border: 3px solid darkgray;
-  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  min-height: 100px;
+  font-weight: 500;
   display: flex;
+  color: #fff;
   justify-content: center;
   align-items: center;
+  border: 1px solid #9d116c;
+  background-image: linear-gradient(-180deg, #ff89d6 0%, #c01f9e 100%);
+  box-shadow: 0 0.5rem 1.25rem 0 rgba(195, 22, 103, 0.5),
+    0 -0.25rem 1.5rem rgb(155, 15, 106) inset,
+    0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
+    0 0.25rem 0.5rem 0 rgb(207, 70, 182) inset;
+  &:hover {
+    box-shadow: 0px 2px 20px #a20a3c, 0 -0.25rem 1.5rem rgb(155, 15, 106) inset,
+      0 0.75rem 0.5rem rgba(246, 55, 55, 0.4) inset;
+    // background-image: linear-gradient(-180deg, #ff89d6 0%, #c01f9e 100%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background-image: linear-gradient(
+      -180deg,
+      #c01f9e 0%,
+      #ff89d6 100%
+    ); /* Change the gradient to create a pressed effect */
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2) inset,
+      0 1px 3px rgba(0, 0, 0, 0.4), 0 0.25rem 0.5rem 0 rgb(207, 70, 182) inset;
+    top: -3px;
+
+    &::before {
+      visibility: hidden;
+    }
+  }
+}
+
+.navLink span {
+  color: transparent;
+  background-image: linear-gradient(0deg, #ee82da 0%, #fefafd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
+}
+
+.navLink::before {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 7.5rem);
+  background: #fff;
+  border-radius: 100%;
+
+  opacity: 0.7;
+  background-image: linear-gradient(
+    -270deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 20%,
+    #ffffff 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.navLink::after {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 7.5rem);
+  background: #fff;
+  border-radius: 100%;
+
+  filter: blur(1px);
+  opacity: 0.05;
+  background-image: linear-gradient(
+    -270deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 20%,
+    #ffffff 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
