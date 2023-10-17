@@ -90,7 +90,7 @@ const GameBoard: React.FC = () => {
 
   return (
     <>
-      <div className="score">Score: {score}</div>
+      <div className={styles.score}>Score: {score}</div>
       {cards.every((card) => card.matched) && (
         <div className={styles.message}>Game Ends! Your score is: {score}</div>
       )}
