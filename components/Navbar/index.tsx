@@ -1,4 +1,3 @@
-import type { AppProps } from "next/app";
 import { ChildProps } from "@/types";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";

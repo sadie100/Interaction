@@ -1,8 +1,9 @@
 /* Navbar.module.scss */
 
+@import "../../styles/theme";
+
 // $primaryColor: #ff6b6b; /* 주 색상 */
 // $secondaryColor: #3d7a8d; /* 보조 색상 */
-
 .nav {
   width: 20%;
   min-width: 200px;
@@ -12,7 +13,7 @@
   background-color: white; /* 배경색을 주 색상으로 변경 */
   position: fixed; /* 좌측에 고정 */
   left: 0;
-  top: 0;
+  top: calc($header-height + 5px);
   display: flex;
   flex-direction: column;
   border-radius: 15px;
