@@ -67,8 +67,11 @@
       #c01f9e 0%,
       #ff89d6 100%
     ); /* Change the gradient to create a pressed effect */
-    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2) inset,
-      0 1px 3px rgba(0, 0, 0, 0.4), 0 0.25rem 0.5rem 0 rgb(207, 70, 182) inset;
+    // box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2) inset,
+    //   0 1px 3px rgba(0, 0, 0, 0.4), 0 0.25rem 0.5rem 0 rgb(207, 70, 182) inset;
+    box-shadow: 0 -0.25rem 1.5rem rgb(155, 15, 106) inset,
+      0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
+      0 0.25rem 0.5rem 0 rgb(207, 70, 182) inset;
     top: -3px;
 
     &::before {
