@@ -7,11 +7,10 @@ $primaryColor: rgb(207, 70, 182);
   width: 100%;
   height: $header-height;
   position: relative;
-  padding: 1rem 3rem;
+  padding: 1rem;
   font-size: 1rem;
   display: flex;
   color: #fff;
-  justify-content: center;
   align-items: center;
   border: 1px solid #9d116c;
   background-image: linear-gradient(-180deg, #ff89d6 0%, #c01f9e 100%);
@@ -80,3 +79,8 @@ $primaryColor: rgb(207, 70, 182);
 //   border-radius: 15px;
 //   background: linear-gradient(hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
 // }
+
+.mainLink {
+  color: white;
+  font-size: 30px;
+}

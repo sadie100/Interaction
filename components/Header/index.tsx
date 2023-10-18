@@ -14,7 +14,7 @@ type NavbarWrapperProps = {
 export default function Header() {
   return (
     <HeaderWrapper>
-      <MainLink href="/"></MainLink>
+      <MainLink href="/">홈 화면으로</MainLink>
     </HeaderWrapper>
   );
 }
