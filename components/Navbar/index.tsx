@@ -16,6 +16,7 @@ export default function Navbar() {
     <NavbarWrapper>
       <NavLink href="/water">물</NavLink>
       <NavLink href="/card_game">카드 게임</NavLink>
+      <NavLink href="/test-render">리액트 렌더 테스트</NavLink>
     </NavbarWrapper>
   );
 }
