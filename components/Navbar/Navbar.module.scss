@@ -10,8 +10,8 @@
   max-width: 250px;
   height: 100%;
   min-height: 100vh;
-  background-color: white; /* 배경색을 주 색상으로 변경 */
-  position: fixed; /* 좌측에 고정 */
+  // background-color: white; /* 배경색을 주 색상으로 변경 */
+  position: absolute; /* 좌측에 고정 */
   left: 0;
   top: calc($header-height + 5px);
   display: flex;
