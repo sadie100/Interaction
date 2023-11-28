@@ -2,19 +2,28 @@ import { useMemo, useState } from 'react';
 import ChildWithProp from './ChildWithProp';
 import ChildWithPropNotUsing from './ChildWithPropNotUsing';
 import ChildWithNothing from './ChildWithNothing';
+import ChildAcrossProp from './ChildAcrossProp';
 
 const Wrapper = () => {
-  const [data, setData] = useState(0);
+  const [constant, setConstant] = useState(0);
+  const [data, setData] = useState({
+    name: 'kim',
+    age: 12
+  });
   const handleData = () => {
-    setData((dat) => dat + 1);
+    setData((data) => ({
+      name: data.name + '1',
+      age: data.age + 1
+    }));
   };
+
   return (
     <>
-      <button onClick={handleData}>데이터를 변경한다.</button>
-      <ChildWithProp data={data} />
-      <ChildWithPropNotUsing data={data} />
+      <button onClick={() => setConstant(3)}>콘스탄스를 변경한다.</button>
       <ChildWithNothing />
-      <input />
+      <ChildAcrossProp data={data} handleData={handleData} constant={constant} />
+      {/* <ChildWithProp data={data} />
+      <ChildWithPropNotUsing data={data} /> */}
     </>
   );
 };
