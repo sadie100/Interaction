@@ -1,13 +1,12 @@
 import { memo } from 'react';
 
-const ChildWithPropNotUsing = ({ constant }) => {
-  console.log('낫유징 렌더');
+const ChildWithPropNotUsing = (props) => {
+  console.log('child not using 렌더');
   return (
     <>
-      <div>나는 data를 쓰지 않는 child 입니다.</div>
-      <div>내가 렌더링 되는지 보세요. 콘스탄트 : {constant}</div>
+      <div>나는 not using child</div>
     </>
   );
 };
 
-export default memo(ChildWithPropNotUsing);
+export default ChildWithPropNotUsing;

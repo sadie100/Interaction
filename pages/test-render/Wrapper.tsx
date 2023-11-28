@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import ChildWithProp from './ChildWithProp';
+import ChildWithData from './ChildWithData';
 import ChildWithPropNotUsing from './ChildWithPropNotUsing';
 import ChildWithNothing from './ChildWithNothing';
 import ChildAcrossProp from './ChildAcrossProp';
@@ -16,13 +16,21 @@ const Wrapper = () => {
       age: data.age + 1
     }));
   };
+  const handleSameData = () => {
+    setData((data) => ({
+      name: 'kim',
+      age: 12
+    }));
+  };
+
+  const nothingHappens = () => {};
 
   return (
     <>
-      <button onClick={() => setConstant(3)}>콘스탄스를 변경한다.</button>
+      <button onClick={() => setConstant((con) => con + 1)}>콘스탄스를 변경한다.</button>
+      <ChildAcrossProp data={data} handleData={handleData} handleSameData={handleSameData} nothingHappens={nothingHappens} constant={constant} />
       <ChildWithNothing />
-      <ChildAcrossProp data={data} handleData={handleData} constant={constant} />
-      {/* <ChildWithProp data={data} />
+      {/* <ChildWithData data={data} />
       <ChildWithPropNotUsing data={data} /> */}
     </>
   );
