@@ -1,7 +1,7 @@
-import { useState } from "react";
-import ChildWithProp from "./ChildWithProp";
-import ChildWithPropNotUsing from "./ChildWithPropNotUsing";
-import ChildWithNothing from "./ChildWithNothing";
+import { useMemo, useState } from 'react';
+import ChildWithProp from './ChildWithProp';
+import ChildWithPropNotUsing from './ChildWithPropNotUsing';
+import ChildWithNothing from './ChildWithNothing';
 
 const Wrapper = () => {
   const [data, setData] = useState(0);
@@ -14,6 +14,7 @@ const Wrapper = () => {
       <ChildWithProp data={data} />
       <ChildWithPropNotUsing data={data} />
       <ChildWithNothing />
+      <input />
     </>
   );
 };

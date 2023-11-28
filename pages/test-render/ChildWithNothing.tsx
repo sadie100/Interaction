@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useMemo, memo } from 'react';
 
 const ChildWithNothing = (props) => {
+  console.log(props);
   return (
     <>
       <div>내겐 data가 넘어오지도 않습니다.</div>
@@ -9,4 +10,4 @@ const ChildWithNothing = (props) => {
   );
 };
 
-export default ChildWithNothing;
+export default memo(ChildWithNothing);
